@@ -1,0 +1,8 @@
+read
+call @square
+write
+exit
+@square
+dup
+mult
+return
