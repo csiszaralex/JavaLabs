@@ -12,7 +12,11 @@ public class Consumer extends Thread {
     public void run() {
         while(true) {
             try {
-                System.out.println("consumed " + this.uzenet + " " + fifo.get() + " " + (System.currentTimeMillis() % 100000));
+                String uzenet = "";
+                synchronized (fifo) {
+                    uzenet = fifo.get();
+                }
+//                System.out.println("consumed " + this.uzenet + " "  + uzenet + " " + (System.currentTimeMillis() % 100000));
                 Thread.sleep(delay);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);

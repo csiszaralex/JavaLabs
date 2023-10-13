@@ -15,9 +15,9 @@ public class Application {
 //        Thread t1 = new Thread(prod);
 //        t1.start();
 
-        Consumer cons = new Consumer(fifo, "1", r.nextInt(50)+100);
-        Consumer cons2 = new Consumer(fifo, "2", r.nextInt(50)+100);
-        Consumer cons3 = new Consumer(fifo, "3", r.nextInt(50)+100);
+        Consumer cons = new Consumer(fifo, "1", r.nextInt(500)+1000);
+        Consumer cons2 = new Consumer(fifo, "2", r.nextInt(500)+1000);
+        Consumer cons3 = new Consumer(fifo, "3", r.nextInt(500)+1000);
         cons.start();
         cons2.start();
         cons3.start();

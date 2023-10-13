@@ -14,10 +14,10 @@ public class Producer extends Thread {
 
     public void go() throws InterruptedException {
         while (true) {
-//            synchronized (fifo) {
-            fifo.push(uzenet + " " + srsz);
-//            }
-            System.out.println("produced "+uzenet + "\t" + srsz + "\t" + (System.currentTimeMillis() % 100000));
+            synchronized (fifo) {
+                fifo.push(uzenet + " " + srsz);
+            }
+//            System.out.println("produced "+uzenet + "\t" + srsz + "\t" + (System.currentTimeMillis() % 100000));
             srsz++;
             Thread.sleep(delay);
         }
