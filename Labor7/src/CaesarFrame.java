@@ -1,7 +1,14 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 
 public class CaesarFrame extends JFrame{
+    public class OkButtonActionListener implements ActionListener{
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            txt_dwn.setText(caesarCode(txt_up.getText(), (char)cb.getSelectedItem()));
+        }
+    }
     private final JTextField txt_up = new JTextField(20);
     private final JTextField txt_dwn = new JTextField(20);
     private final JButton btn = new JButton("Code!");
@@ -24,8 +31,7 @@ public class CaesarFrame extends JFrame{
         this.setSize(400,110);
         this.setResizable(false);
 
-        //txt_up.addActionListener((e)->{txt_dwn.setText(caesarCode(txt_up.getText(), (char)cb.getSelectedItem()));});
-        btn.addActionListener((e)->{txt_dwn.setText(caesarCode(txt_up.getText(), (char)cb.getSelectedItem()));});
+        btn.addActionListener(new OkButtonActionListener());
 
         setLayout(new GridLayout(2,1));
 
