@@ -8,8 +8,8 @@
 | Lab 4      | Util         |  7   |  9  |        :x:         | :white_check_mark: |
 | Lab 5      | Threads      |  5   |  8  |        :x:         | :white_check_mark: |
 | Lab 5.5    | StackMachine |  7   |  7  | :heavy_minus_sign: | :white_check_mark: |
-| Lab 6      | Lambda       |      |     |                    |                    |
-| Lab 7      | Swing basics |      |     |                    |                    |
+| Lab 6      | Lambda       |  4   |  4  |        :x:         | :white_check_mark: |
+| Lab 7      | Swing basics |  5   |  7  |        :x:         | :white_check_mark: |
 | Lab 8      | Swing MVC    |      |     |                    |                    |
 | Lab 9      | JUnit        |      |     |                    |                    |
 | Lab 10     | XML          |      |     |                    |                    |
